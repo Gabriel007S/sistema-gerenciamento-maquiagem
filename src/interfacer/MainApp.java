@@ -37,7 +37,7 @@ public class MainApp extends Application {
 
         Scene scene = new Scene(layout, 400, 400);
 
-        stage.setTitle("Sistema de Gerenciamento");
+        stage.setTitle("Sistema Atualizado");
         stage.setScene(scene);
         stage.show();
     }
