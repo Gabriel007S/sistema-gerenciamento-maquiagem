@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER"
+	xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.HistoricoController">
+
+	<TextField fx:id="campoFiltroProduto"
+		promptText="Filtrar por nome do produto" />
+
+	<TableView fx:id="tabelaVendas" prefHeight="300">
+
+		<columns>
+
+			<TableColumn fx:id="colId" text="ID" prefWidth="50" />
+			<TableColumn fx:id="colProduto" text="Produto"
+				prefWidth="180" />
+			<TableColumn fx:id="colCategoria" text="Categoria"
+				prefWidth="120" />
+			<TableColumn fx:id="colQtd" text="Qtd" prefWidth="60" />
+			<TableColumn fx:id="colTotal" text="Total" prefWidth="80" />
+			<TableColumn fx:id="colData" text="Data" prefWidth="140" />
+			<TableColumn fx:id="colLucro" text="Lucro" prefWidth="80" />
+
+		</columns>
+
+	</TableView>
+
+</VBox>

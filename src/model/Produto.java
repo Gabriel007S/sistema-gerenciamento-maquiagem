@@ -6,13 +6,16 @@ public class Produto {
 	private float precoCompra;
 	private float precoVenda;
 	private int quantidade;
+	private Categoria categoria;
 	
-	public Produto(int id, String nome, float precoCompra, float precoVenda, int quantidade) {
+	public Produto(int id, String nome, Categoria categoria, float precoCompra, float precoVenda, int quantidade) {
 		this.id = id;
 		this.nome = nome;
+		this.categoria = categoria;
 		this.precoCompra = precoCompra;
 		this.precoVenda = precoVenda;
 		this.quantidade = quantidade;
+		
 	}
 
 	public int getId() {
@@ -25,6 +28,9 @@ public class Produto {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public Categoria getCategoria() {
+	    return categoria;
 	}
 
 	public float getPrecoCompra() {
@@ -61,6 +67,9 @@ public class Produto {
 		}
 		this.quantidade += qtd;
 	}
-	
+	@Override
+	public String toString() {
+		return id + "-" + nome + " | " + categoria.getNome() + " | Estoque: " + quantidade;
+	}
 	
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox spacing="15" alignment="CENTER"
+	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.RelatorioController">
+
+	<Label text="Relatório Geral" />
+
+	<Label text="Lucro Total:" />
+	<Label fx:id="labelLucroTotal" />
+
+	<Label text="Total de Vendas:" />
+	<Label fx:id="labelTotalVendas" />
+
+	<Label text="Unidades Vendidas:" />
+	<Label fx:id="labelUnidadesVendidas" />
+
+	<Button text="Atualizar" onAction="#handleAtualizar" />
+
+</VBox>

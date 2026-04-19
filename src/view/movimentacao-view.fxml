@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" alignment="CENTER"
+	xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.MovimentacaoController">
+
+	<ListView fx:id="listaProdutos" prefHeight="250" />
+
+	<TextField fx:id="campoQtdMovimento" promptText="Quantidade" />
+
+	<HBox spacing="10" alignment="CENTER">
+		<Button text="Registrar Venda" onAction="#handleVenda" />
+
+		<Button text="Registrar Compra" onAction="#handleCompra" />
+	</HBox>
+
+</VBox>

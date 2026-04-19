@@ -1,23 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
 
-<VBox spacing="10" alignment="CENTER"
-      xmlns="http://javafx.com/javafx/11"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.MainController">
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-    <Label text="Sistema de Estoque" />
 
-    <TextField fx:id="campoNome" promptText="Nome do produto" />
+<VBox alignment="CENTER" prefHeight="610.0" prefWidth="732.0"
+	spacing="10" xmlns="http://javafx.com/javafx/25"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.MainController">
+	<Label text="Sistema de Estoque" />
 
-    <Button text="Cadastrar Produto"
-            onAction="#handleCadastrar" />
+	<TabPane prefHeight="627.0" prefWidth="732.0">
 
-    <ListView fx:id="listaProdutos" />
+		<Tab text="Cadastro">
+			<fx:include fx:id="cadastroView"
+				source="cadastro-view.fxml" />
+		</Tab>
+
+		<Tab text="Movimentação">
+			<fx:include fx:id="movimentacaoView"
+				source="movimentacao-view.fxml" />
+		</Tab>
+
+		<Tab text="Histórico">
+			<fx:include fx:id="historicoView"
+				source="historico-view.fxml" />
+		</Tab>
+
+		<Tab text="Relatório">
+			<fx:include fx:id="relatorioView"
+				source="relatorio-view.fxml" />
+		</Tab>
+	</TabPane>
 
 </VBox>
+		
